@@ -1,0 +1,38 @@
+@using IClient.BusinessCore
+@using IClient.UseCases
+@inject NavigationManager nav
+@inject IDeleteProductUseCase DeleteProductUseCase
+
+@if (Product != null)
+{
+    <tr>
+        <td>@Product.ProductName</td>
+        <td>@Product.Quantity</td>
+        <td>@Product.Price $</td>
+        <td>
+            <button type="button" class="btn btn-outline-primary" @onclick="@(() => EditProduct(Product.ProductId))">Edit</button>
+            <button type="button" class="btn btn-outline-danger" @onclick="@(async() => await DeleteProduct(Product))">Delete</button>
+        </td> 
+    </tr>   
+}
+
+@code {
+
+    [Parameter]
+    public EventCallback OnProductDeleted { get; set; }
+
+    [Parameter]
+    public Product? Product { get; set; }
+    
+    private async Task EditProduct(int productId)
+    {
+        nav.NavigateTo($"/editproduct/{productId}");
+    }
+    
+    private async Task DeleteProduct(Product product)
+    {
+       await DeleteProductUseCase.ExecuteAsync(product.ProductId);
+        await OnProductDeleted.InvokeAsync();
+    }
+
+}

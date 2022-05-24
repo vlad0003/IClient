@@ -1,0 +1,74 @@
+@page "/sell"
+@using IClient.viewModels
+@using IClient.BusinessCore
+@using IClient.UseCases
+@inject ISellProductUseCase SellProductUseCase
+
+<ErrorMessageComponent ErrorMessage="@errorMessage"></ErrorMessageComponent>
+@if (sellViewModel != null)
+{
+    <EditForm Model="sellViewModel" OnValidSubmit="OnValidSubmit">
+        <DataAnnotationsValidator></DataAnnotationsValidator>
+        <ValidationSummary></ValidationSummary>
+
+        <div class="form-group">
+            <label for="po">Order Number</label>
+            <InputText id="po" @bind-Value="sellViewModel.SalesOrderNumber" class="form-control mt-2"></InputText>
+        </div>
+
+        <div class="form-group mt-2">
+            <label for="inv" class="mt-2">Product to sell</label>
+            <ViewProductsComponent 
+                OnSelectProduct="OnSelectProduct"
+                DisplaySearchResult="true"></ViewProductsComponent>                   
+            <InputText id="inv" class="form-control mt-2" @bind-Value="sellViewModel.ProductName" disabled></InputText>            
+            <input type="hidden" class="mt-2" value="@sellViewModel.ProductId" />
+        </div>
+        
+        <div class="form-group mb-2">
+        </div>
+
+        <div class="form-group mt-2">
+            <label for="qty">Quantity</label>
+            <InputNumber id="qty" @bind-Value="sellViewModel.QuantityToSell" class="form-control"></InputNumber>
+        </div>
+        
+          <h5 class="mt-3">Price: @selectedProduct?.Price.ToString()$</h5>
+
+        <br/>
+        <button type="submit" class="btn btn-primary">Sell</button>
+
+    </EditForm>
+}
+
+@code {
+    private SellViewModel sellViewModel = new SellViewModel();
+    private Product selectedProduct;
+    private string errorMessage;
+
+    private void OnValidSubmit()
+    {
+        if (this.selectedProduct.Quantity < this.sellViewModel.QuantityToSell)
+        {
+            this.errorMessage = $"Кол-во деталей отсутствует в инвентаре. Только {this.selectedProduct.Quantity} доступно";
+            return;
+        }
+        else
+        {
+            this.errorMessage = string.Empty;
+        }
+        
+        SellProductUseCase.ExecuteAsync(this.sellViewModel.SalesOrderNumber, this.selectedProduct, this.sellViewModel.QuantityToSell, "Vlad");
+        this.sellViewModel = new SellViewModel();
+        this.selectedProduct = null;
+        this.errorMessage = string.Empty;
+    }
+
+    private void OnSelectProduct(Product product)
+    {
+        this.selectedProduct = product;
+        sellViewModel.ProductId = product.ProductId;
+        sellViewModel.ProductName = product.ProductName;
+        sellViewModel.ProductPrice = product.Price;
+    }
+}

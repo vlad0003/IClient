@@ -1,0 +1,14 @@
+﻿@page "/counter"
+@using IClient.UseCases
+@using IClient.BusinessCore
+@inject IViewInventoryByNameUseCase ViewInventoryByNameUseCase
+<br/>
+<ViewInventoriesComponent OnSearchInventories="OnSearchInventories"></ViewInventoriesComponent>
+
+
+@code {
+    private void OnSearchInventories(List<Inventory> inventories)
+    {
+    }
+
+}

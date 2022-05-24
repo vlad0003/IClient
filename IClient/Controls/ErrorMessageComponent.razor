@@ -1,0 +1,12 @@
+@if (!string.IsNullOrWhiteSpace(ErrorMessage))
+{
+    <div class="alert alert-warning">
+        @ErrorMessage
+    </div>   
+}
+
+@code {
+    [Parameter]
+    public string ErrorMessage { get; set; }
+
+}
