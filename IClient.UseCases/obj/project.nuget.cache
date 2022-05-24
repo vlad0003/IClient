@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ghxixRhs5aok+ZuWpC+4umSXQIrQPs4rCDSiTXPZE7DOtmRL2LWe45QAfJ1GgOWfHT0jWQUfog0BajBvjlkLvg==",
+  "dgSpecHash": "sUhtEnxvy12LzoouMWnb4DjODabt66m8rEAIH0G8lgpBZFUa7oqlsOu5p30pMtxSr4NZrzZxBGny+Qd43XfnGg==",
   "success": true,
   "projectFilePath": "/Users/vladislavkolpakov/RiderProjects/IClient/IClient.UseCases/IClient.UseCases.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,7 @@
     "/Users/vladislavkolpakov/.nuget/packages/microsoft.entityframeworkcore.analyzers/6.0.5/microsoft.entityframeworkcore.analyzers.6.0.5.nupkg.sha512",
     "/Users/vladislavkolpakov/.nuget/packages/microsoft.entityframeworkcore.design/6.0.5/microsoft.entityframeworkcore.design.6.0.5.nupkg.sha512",
     "/Users/vladislavkolpakov/.nuget/packages/microsoft.entityframeworkcore.relational/6.0.5/microsoft.entityframeworkcore.relational.6.0.5.nupkg.sha512",
+    "/Users/vladislavkolpakov/.nuget/packages/microsoft.entityframeworkcore.tools/6.0.5/microsoft.entityframeworkcore.tools.6.0.5.nupkg.sha512",
     "/Users/vladislavkolpakov/.nuget/packages/microsoft.extensions.caching.abstractions/6.0.0/microsoft.extensions.caching.abstractions.6.0.0.nupkg.sha512",
     "/Users/vladislavkolpakov/.nuget/packages/microsoft.extensions.caching.memory/6.0.1/microsoft.extensions.caching.memory.6.0.1.nupkg.sha512",
     "/Users/vladislavkolpakov/.nuget/packages/microsoft.extensions.configuration.abstractions/6.0.0/microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
@@ -19,6 +20,8 @@
     "/Users/vladislavkolpakov/.nuget/packages/microsoft.extensions.logging.abstractions/6.0.0/microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
     "/Users/vladislavkolpakov/.nuget/packages/microsoft.extensions.options/6.0.0/microsoft.extensions.options.6.0.0.nupkg.sha512",
     "/Users/vladislavkolpakov/.nuget/packages/microsoft.extensions.primitives/6.0.0/microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "/Users/vladislavkolpakov/.nuget/packages/npgsql/6.0.4/npgsql.6.0.4.nupkg.sha512",
+    "/Users/vladislavkolpakov/.nuget/packages/npgsql.entityframeworkcore.postgresql/6.0.4/npgsql.entityframeworkcore.postgresql.6.0.4.nupkg.sha512",
     "/Users/vladislavkolpakov/.nuget/packages/system.collections.immutable/6.0.0/system.collections.immutable.6.0.0.nupkg.sha512",
     "/Users/vladislavkolpakov/.nuget/packages/system.diagnostics.diagnosticsource/6.0.0/system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
     "/Users/vladislavkolpakov/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"

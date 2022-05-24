@@ -32,7 +32,7 @@ public class ProductTransactionRepository : IProductTransactionRepository
                     QuantityBefore = qtyBefore,
                     ActivityType = InventoryTransactionType.ProduceProduct,
                     QuantityAfter = pi.Inventory.Quantity,
-                    TransactionDate = DateTime.Now,
+                    TransactionDate = DateTime.UtcNow,
                     DoneBy = doneBy,
                     UnitPrice = price
                 });
@@ -46,7 +46,7 @@ public class ProductTransactionRepository : IProductTransactionRepository
             QuantityBefore = product.Quantity,
             ActivityType = ProductTransactionType.ProduceProduct,
             QuantityAfter = product.Quantity + quantity,
-            TransactionDate = DateTime.Now,
+            TransactionDate = DateTime.UtcNow,
             DoneBy = doneBy,
             UnitPrice = price
         });

@@ -12,6 +12,8 @@
           "Microsoft.EntityFrameworkCore": "6.0.5",
           "Microsoft.EntityFrameworkCore.Design": "6.0.5",
           "Microsoft.EntityFrameworkCore.InMemory": "6.0.4",
+          "Microsoft.EntityFrameworkCore.Tools": "6.0.5",
+          "Npgsql": "6.0.4",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "6.0.4"
         },
         "runtime": {
@@ -85,6 +87,11 @@
             "assemblyVersion": "6.0.5.0",
             "fileVersion": "6.0.522.21804"
           }
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Tools/6.0.5": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "6.0.5"
         }
       },
       "Microsoft.Extensions.Caching.Abstractions/6.0.0": {
@@ -227,13 +234,21 @@
       },
       "System.Runtime.CompilerServices.Unsafe/6.0.0": {},
       "IClient.BusinessCore/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.5",
+          "Npgsql": "6.0.4",
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "6.0.4"
+        },
         "runtime": {
           "IClient.BusinessCore.dll": {}
         }
       },
       "IClient.UseCases/1.0.0": {
         "dependencies": {
-          "IClient.BusinessCore": "1.0.0"
+          "IClient.BusinessCore": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "6.0.5",
+          "Npgsql": "6.0.4",
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "6.0.4"
         },
         "runtime": {
           "IClient.UseCases.dll": {}
@@ -295,6 +310,13 @@
       "sha512": "sha512-vhAQizlAgvPfurkh9XysNaFc/g3WPXtSka3Y1rXuQdnT//p16CDKt9lO9h+rYmooD+cA7TijSxwqck4GApDT/Q==",
       "path": "microsoft.entityframeworkcore.relational/6.0.5",
       "hashPath": "microsoft.entityframeworkcore.relational.6.0.5.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Tools/6.0.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-aeCzVNLmDl9IfB19WAjrlKcG61Cl4/ZV/9ubifmifKEps+kvMkKIcams5j+8q6dtx9/UL2x3tbOz2BS3eU0sXQ==",
+      "path": "microsoft.entityframeworkcore.tools/6.0.5",
+      "hashPath": "microsoft.entityframeworkcore.tools.6.0.5.nupkg.sha512"
     },
     "Microsoft.Extensions.Caching.Abstractions/6.0.0": {
       "type": "package",

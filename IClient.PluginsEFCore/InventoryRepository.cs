@@ -13,11 +13,12 @@ public class InventoryRepository : IInventoryRepository
         this.db = db;
     }
 
-    public async Task<IEnumerable<Inventory>> GetInventoriesByName(string name = "")
+    public async Task<IEnumerable<Inventory>> GetInventoriesByName(string name)
     {
-        return await this.db.Inventories.Where(x => x.Inventoryname
-            .Contains(name,StringComparison.OrdinalIgnoreCase) || string.IsNullOrWhiteSpace(name))
-            .ToListAsync();
+        return await this.db.Inventories.Where(x => x.Inventoryname.ToLower().IndexOf(name.ToLower()) >= 0).ToListAsync();
+        //return await this.db.Inventories.Where(x => x.Inventoryname
+        //  .Contains(name,StringComparison.OrdinalIgnoreCase) || string.IsNullOrWhiteSpace(name))
+        //.ToListAsync();
     }
     
 
@@ -29,7 +30,7 @@ public class InventoryRepository : IInventoryRepository
     public async Task AddInventoryAsync(Inventory inventory)
     {
         if (db.Inventories.Any(x =>
-                x.Inventoryname.Equals(inventory.Inventoryname, StringComparison.OrdinalIgnoreCase)))
+                x.Inventoryname.Equals(inventory.Inventoryname.ToLower() == inventory.Inventoryname.ToLower())))
         {
             return;
         }
@@ -40,12 +41,17 @@ public class InventoryRepository : IInventoryRepository
 
     public async  Task UpdateInventoryAsync(Inventory inventory)
     {
-        if (db.Inventories.Any(x => x.InventoryId != inventory.InventoryId && 
-                                    x.Inventoryname.Equals(inventory.Inventoryname,
-                                        StringComparison.OrdinalIgnoreCase)))
-        {
-            return;
-        }
+        if(db.Inventories.Any(x=>x.InventoryId != inventory.InventoryId &&
+                                 x.Inventoryname.ToLower() == inventory.Inventoryname.ToLower())) return;
+        
+        //if (db.Inventories.Any(x => x.InventoryId != inventory.InventoryId && 
+          //                          x.Inventoryname.Equals(inventory.Inventoryname,
+            //                            StringComparison.OrdinalIgnoreCase)))
+       // {
+         //   return;
+        //}
+        
+        
 
         var inv = await this.db.Inventories.FindAsync(inventory.InventoryId);
         if (inv != null)

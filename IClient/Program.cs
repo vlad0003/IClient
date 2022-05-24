@@ -7,12 +7,16 @@ using IClient.PluginsEFCore;
 using IClient.UseCases;
 using IClient.UseCases.PluginsInterfaces;
 using IClient.UseCases.Reports;
+using Microsoft.EntityFrameworkCore.Design;
 
 var builder = WebApplication.CreateBuilder(args);
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlite(connectionString));
+
+
+
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<ApplicationDbContext>();
@@ -24,7 +28,7 @@ builder.Services
 
 builder.Services.AddDbContext<IClientContext>(options =>
 {
-    options.UseInMemoryDatabase("IClient");
+    options.UseNpgsql(@"Server=localhost;Port=5432;User Id=postgres;Password=3119;Database=XCLient");
 });
 
 builder.Services.AddTransient<IInventoryRepository, InventoryRepository>();
@@ -60,8 +64,6 @@ var app = builder.Build();
 var scope = app.Services.CreateScope();
 var IClientContext = scope.ServiceProvider.GetRequiredService<IClient.PluginsEFCore.IClientContext>();
 
-IClientContext.Database.EnsureDeleted();
-IClientContext.Database.EnsureCreated();
 
 if (app.Environment.IsDevelopment())
 {

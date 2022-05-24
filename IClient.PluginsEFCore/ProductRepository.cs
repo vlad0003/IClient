@@ -15,7 +15,8 @@ public class ProductRepository : IProductRepository
 
     public async Task AddProductAsync(Product product)
     {
-        if (db.Products.Any(x => x.ProductName.Equals(product.ProductName, StringComparison.OrdinalIgnoreCase))) return ;
+       // if (db.Products.Any(x => x.ProductName.Equals(product.ProductName, StringComparison.OrdinalIgnoreCase))) return ;
+       if(db.Products.Any(x=>x.ProductName.ToLower() == product.ProductName.ToLower())) return;
         db.Products.Add(product);
         await db.SaveChangesAsync();
         var prods = db.Products.Include(x => x.ProductInventories).ThenInclude(x => x.Inventory).ToList();
@@ -23,10 +24,8 @@ public class ProductRepository : IProductRepository
 
     public async Task<List<Product>> GetProductsByName(string name)
     {
-        return await this.db.Products.Where(x => (x.ProductName
-                .Contains(name,StringComparison.OrdinalIgnoreCase)) || string.IsNullOrWhiteSpace(name) 
-                && x.IsActive == true)
-            .ToListAsync(); 
+        return await this.db.Products.Where(x => (x.ProductName.ToLower().IndexOf(name.ToLower()) >= 0 ||
+                                                  string.IsNullOrWhiteSpace(name)) && x.IsActive == true).ToListAsync();
     }
 
     public async Task<Product> GetProductByIdAsync(int productId)
@@ -38,12 +37,9 @@ public class ProductRepository : IProductRepository
 
     public async Task UpdateProductAsync(Product product)
     {
-        if (db.Products.Any(x => x.ProductName.Equals(product.ProductName, StringComparison.CurrentCultureIgnoreCase)))
-        {
-            return;
-        }
+       if(db.Products.Any(x=>x.ProductName.ToLower() == product.ProductName.ToLower())) return;
 
-        var prod = await db.Products.FindAsync(product.ProductId);
+       var prod = await db.Products.FindAsync(product.ProductId);
         if (prod != null)
         {
             prod.ProductName = product.ProductName;

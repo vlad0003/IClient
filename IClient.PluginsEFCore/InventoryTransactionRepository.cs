@@ -21,7 +21,7 @@ public class InventoryTransactionRepository :IInventoryTransactionRepository
             QuantityBefore = inventory.Quantity,
             ActivityType = InventoryTransactionType.PurchaseInventory,
             QuantityAfter = inventory.Quantity + quantity,
-            TransactionDate = DateTime.Now,
+            TransactionDate = DateTime.UtcNow,
             DoneBy = doneBy,
             UnitPrice = price
         });
