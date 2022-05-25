@@ -4,7 +4,7 @@
 @inject IViewProductByIdUseCase ViewProductByIdUseCase
 @inject IEditProductUseCase EditProductUseCase
 @inject NavigationManager nav
-
+@attribute [Authorize]
 <br/>
 
 @if (this.product != null)

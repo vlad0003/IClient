@@ -3,6 +3,7 @@
 @using IClient.BusinessCore
 @using IClient.UseCases
 @inject ISellProductUseCase SellProductUseCase
+@attribute [Authorize]
 
 <ErrorMessageComponent ErrorMessage="@errorMessage"></ErrorMessageComponent>
 @if (sellViewModel != null)

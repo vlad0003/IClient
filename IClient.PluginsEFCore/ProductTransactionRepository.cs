@@ -61,7 +61,7 @@ public class ProductTransactionRepository : IProductTransactionRepository
             ProductId = product.ProductId,
             QuantityBefore = product.Quantity,
             QuantityAfter = product.Quantity - quantity,
-            TransactionDate = DateTime.Now,
+            TransactionDate = DateTime.UtcNow,
             DoneBy = doneBy,
             UnitPrice = price,
             ActivityType = ProductTransactionType.SellProduct

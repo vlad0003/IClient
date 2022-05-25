@@ -4,6 +4,8 @@
 @inject NavigationManager nav
 @inject IViewInventoryById ViewInventoryById
 @inject IEditInventoryUseCase EditInventoryUseCase
+@attribute [Authorize]
+
 
 @if (this.inventory != null)
 {
