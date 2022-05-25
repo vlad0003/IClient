@@ -45,13 +45,13 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Date</th>
-                <th>Product</th>
-                <th>Activity</th>
-                <th>Qty Before</th>
-                <th>Qty After</th>                
-                <th>Production #</th>
-                <th>SO#</th>
+                <th>Дата</th>
+                <th>Продукт</th>
+                <th>Тип</th>
+                <th>Кол-во до:</th>
+                <th>Кол-во после:</th>                
+                <th>№ сборки:</th>
+                <th>№ продажи:</th>
             </tr>
         </thead>
         <tbody>
@@ -63,11 +63,11 @@
                     <td>
                         @if (pt.ActivityType == ProductTransactionType.ProduceProduct)
                         {
-                            <text>Produce</text>
+                            <text>Сборка</text>
                         }
                         else if (pt.ActivityType == ProductTransactionType.SellProduct)
                         {
-                            <text>Sell</text>
+                            <text>Продажа</text>
                         }
                     </td> 
                     <td>@pt.QuantityBefore</td>

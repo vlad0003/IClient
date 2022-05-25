@@ -72,7 +72,11 @@ public class ProductTransactionRepository : IProductTransactionRepository
     public async Task<IEnumerable<ProductTransaction>> GetProductTransactionAsync(string productName, DateTime? dateFrom, DateTime? dateTo,
         ProductTransactionType? transactionType)
     {
-        if (dateTo.HasValue) dateTo = dateTo.Value.AddDays(1);
+        if (dateTo.HasValue)
+        {
+            dateTo = dateTo.Value.AddDays(1);
+        }
+        
         var query = from pt in db.ProductTransactions
             join prod in db.Products on pt.ProductId equals prod.ProductId
             where 

@@ -34,7 +34,10 @@ public class InventoryTransactionRepository :IInventoryTransactionRepository
         DateTime? dateTo, 
         InventoryTransactionType? transactionType)
     {
-        if (dateTo.HasValue) dateTo = dateTo.Value.AddDays(1);
+        if (dateTo.HasValue)
+        {
+            dateTo = dateTo.Value.AddDays(1);
+        }
 
         var query = from it in db.InventoryTransactions
             join inv in db.Inventories on it.InventoryId equals inv.InventoryId

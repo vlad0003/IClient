@@ -14,7 +14,7 @@ public class InventoryTransaction
     [Required]
     public int QuantityAfter { get; set; }
     [Required]
-    public DateTime TransactionDate { get; set; }
+    public DateTime TransactionDate { get; set; } = DateTime.UtcNow;
     [Required]
     public string DoneBy { get; set; }
     public Inventory Inventory { get; set; }
