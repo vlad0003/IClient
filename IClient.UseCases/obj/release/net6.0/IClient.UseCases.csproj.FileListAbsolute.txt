@@ -1,0 +1,17 @@
+/Users/vladislavkolpakov/RiderProjects/IClient/IClient.UseCases/bin/release/net6.0/IClient.UseCases.deps.json
+/Users/vladislavkolpakov/RiderProjects/IClient/IClient.UseCases/bin/release/net6.0/IClient.UseCases.runtimeconfig.json
+/Users/vladislavkolpakov/RiderProjects/IClient/IClient.UseCases/bin/release/net6.0/IClient.UseCases.dll
+/Users/vladislavkolpakov/RiderProjects/IClient/IClient.UseCases/bin/release/net6.0/IClient.UseCases.pdb
+/Users/vladislavkolpakov/RiderProjects/IClient/IClient.UseCases/bin/release/net6.0/IClient.BusinessCore.dll
+/Users/vladislavkolpakov/RiderProjects/IClient/IClient.UseCases/bin/release/net6.0/IClient.BusinessCore.pdb
+/Users/vladislavkolpakov/RiderProjects/IClient/IClient.UseCases/obj/release/net6.0/IClient.UseCases.csproj.AssemblyReference.cache
+/Users/vladislavkolpakov/RiderProjects/IClient/IClient.UseCases/obj/release/net6.0/IClient.UseCases.GeneratedMSBuildEditorConfig.editorconfig
+/Users/vladislavkolpakov/RiderProjects/IClient/IClient.UseCases/obj/release/net6.0/IClient.UseCases.AssemblyInfoInputs.cache
+/Users/vladislavkolpakov/RiderProjects/IClient/IClient.UseCases/obj/release/net6.0/IClient.UseCases.AssemblyInfo.cs
+/Users/vladislavkolpakov/RiderProjects/IClient/IClient.UseCases/obj/release/net6.0/IClient.UseCases.csproj.CoreCompileInputs.cache
+/Users/vladislavkolpakov/RiderProjects/IClient/IClient.UseCases/obj/release/net6.0/IClient.UseCases.csproj.CopyComplete
+/Users/vladislavkolpakov/RiderProjects/IClient/IClient.UseCases/obj/release/net6.0/IClient.UseCases.dll
+/Users/vladislavkolpakov/RiderProjects/IClient/IClient.UseCases/obj/release/net6.0/refint/IClient.UseCases.dll
+/Users/vladislavkolpakov/RiderProjects/IClient/IClient.UseCases/obj/release/net6.0/IClient.UseCases.pdb
+/Users/vladislavkolpakov/RiderProjects/IClient/IClient.UseCases/obj/release/net6.0/IClient.UseCases.genruntimeconfig.cache
+/Users/vladislavkolpakov/RiderProjects/IClient/IClient.UseCases/obj/release/net6.0/ref/IClient.UseCases.dll

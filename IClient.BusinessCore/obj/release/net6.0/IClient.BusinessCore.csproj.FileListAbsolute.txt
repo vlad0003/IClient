@@ -1,0 +1,14 @@
+/Users/vladislavkolpakov/RiderProjects/IClient/IClient.BusinessCore/bin/release/net6.0/IClient.BusinessCore.deps.json
+/Users/vladislavkolpakov/RiderProjects/IClient/IClient.BusinessCore/bin/release/net6.0/IClient.BusinessCore.runtimeconfig.json
+/Users/vladislavkolpakov/RiderProjects/IClient/IClient.BusinessCore/bin/release/net6.0/IClient.BusinessCore.dll
+/Users/vladislavkolpakov/RiderProjects/IClient/IClient.BusinessCore/bin/release/net6.0/IClient.BusinessCore.pdb
+/Users/vladislavkolpakov/RiderProjects/IClient/IClient.BusinessCore/obj/release/net6.0/IClient.BusinessCore.csproj.AssemblyReference.cache
+/Users/vladislavkolpakov/RiderProjects/IClient/IClient.BusinessCore/obj/release/net6.0/IClient.BusinessCore.GeneratedMSBuildEditorConfig.editorconfig
+/Users/vladislavkolpakov/RiderProjects/IClient/IClient.BusinessCore/obj/release/net6.0/IClient.BusinessCore.AssemblyInfoInputs.cache
+/Users/vladislavkolpakov/RiderProjects/IClient/IClient.BusinessCore/obj/release/net6.0/IClient.BusinessCore.AssemblyInfo.cs
+/Users/vladislavkolpakov/RiderProjects/IClient/IClient.BusinessCore/obj/release/net6.0/IClient.BusinessCore.csproj.CoreCompileInputs.cache
+/Users/vladislavkolpakov/RiderProjects/IClient/IClient.BusinessCore/obj/release/net6.0/IClient.BusinessCore.dll
+/Users/vladislavkolpakov/RiderProjects/IClient/IClient.BusinessCore/obj/release/net6.0/refint/IClient.BusinessCore.dll
+/Users/vladislavkolpakov/RiderProjects/IClient/IClient.BusinessCore/obj/release/net6.0/IClient.BusinessCore.pdb
+/Users/vladislavkolpakov/RiderProjects/IClient/IClient.BusinessCore/obj/release/net6.0/IClient.BusinessCore.genruntimeconfig.cache
+/Users/vladislavkolpakov/RiderProjects/IClient/IClient.BusinessCore/obj/release/net6.0/ref/IClient.BusinessCore.dll
