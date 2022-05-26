@@ -9,7 +9,7 @@
            @bind-value="inventoryNameToSearch"
            @bind-value:event="oninput"/>
     <button type="button" class=" input-group-text btn btn-outline-success"
-            @onclick="@(async () => { await ViewInventories();})">View All</button>
+            @onclick="@(async () => { await ViewInventories();})">Найти</button>
 </div>
 
 @if (this.DisplaySearchResult && _inventories != null

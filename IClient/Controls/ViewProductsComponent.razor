@@ -9,7 +9,7 @@
            @bind-value="_productNameToSearch"
            @bind-value:event="oninput"/>
     <button type="button" class=" input-group-text btn btn-outline--success"
-            @onclick="@(async () => { await ViewProducts();})">View All</button>
+            @onclick="@(async () => { await ViewProducts();})">Найти</button>
 </div>
 
 @if (this.DisplaySearchResult && _product != null

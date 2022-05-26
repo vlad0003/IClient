@@ -10,8 +10,8 @@
         <td>@Product.Quantity</td>
         <td>@Product.Price $</td>
         <td>
-            <button type="button" class="btn btn-outline-primary" @onclick="@(() => EditProduct(Product.ProductId))">Edit</button>
-            <button type="button" class="btn btn-outline-danger" @onclick="@(async() => await DeleteProduct(Product))">Delete</button>
+            <button type="button" class="btn btn-outline-primary" @onclick="@(() => EditProduct(Product.ProductId))">Редактировать</button>
+            <button type="button" class="btn btn-outline-danger" @onclick="@(async() => await DeleteProduct(Product))">Удалить</button>
         </td> 
     </tr>   
 }

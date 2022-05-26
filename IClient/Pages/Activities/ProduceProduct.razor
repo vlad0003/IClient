@@ -19,12 +19,12 @@
         <ValidationSummary></ValidationSummary>
 
         <div class="form-group">
-            <label for="po">Production Number</label>
+            <label for="po">Номер продукта</label>
             <InputText id="po" @bind-Value="produceViewModel.ProductionNumber" class="form-control"></InputText>
         </div>
 
         <div class="form-group">
-            <label for="inv">Product to Produce</label>
+            <label for="inv">Продукт для сборки</label>
             <ViewProductsComponent 
                 OnSelectProduct="OnSelectProduct"
                 DisplaySearchResult="true"></ViewProductsComponent>                   
@@ -33,7 +33,7 @@
             @if (selectedProduct != null)
             {
                 <div style="margin-top:3px">
-                    <text>Price: $</text>
+                    <text>Цена: $</text>
                     @selectedProduct?.Price.ToString()
                 </div>                
             }
@@ -41,11 +41,11 @@
         </div>
 
         <div class="form-group">
-            <label for="qty">Quantity</label>
+            <label for="qty">Кол-во</label>
             <InputNumber id="qty" @bind-Value="produceViewModel.QuantityToProduce" class="form-control"></InputNumber>
         </div>
         <br/>
-        <button type="submit" class="btn btn-primary">Produce</button>
+        <button type="submit" class="btn btn-primary">Собрать</button>
 
     </EditForm>
 }

@@ -16,9 +16,9 @@
     <table class="table">
         <thead>
         <tr>
-            <th>Name</th>
-            <th>Quantity</th>
-            <th>Price</th>
+            <th>Название</th>
+            <th>Кол-во</th>
+            <th>Цена</th>
             <th></th>
         </tr>
         </thead>
@@ -30,8 +30,7 @@
         </tbody>
     </table>
 }
-<br/>
-<button type="button" class="btn btn-outline-primary mt-3" @onclick="AddInventory">Add Items</button>
+<button type="button" class="btn btn-outline-primary mt-3" @onclick="AddInventory">Добавить предмет</button>
 
 @code {
     private List<Inventory>? listInventories;
