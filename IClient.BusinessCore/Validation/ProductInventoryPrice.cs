@@ -11,7 +11,7 @@ internal class ProductInventoryPrice : ValidationAttribute
         {
             if (!product.ValidatingPricing())
             {
-                return new ValidationResult($"цена продукта ниже чем стоимость в инвентаре {product.TotalInventoryCost()}",
+                return new ValidationResult($"Цена продукта ниже, чем стоимость в инвентаре {product.TotalInventoryCost()}",
                     new[]{validationContext.MemberName});
             }
         }

@@ -36,7 +36,7 @@ public class InventoryTransactionRepository :IInventoryTransactionRepository
     {
         if (dateTo.HasValue)
         {
-            dateTo = dateTo.Value.AddDays(1);
+            dateTo = dateTo.Value.AddDays(10);
         }
 
         var query = from it in db.InventoryTransactions
