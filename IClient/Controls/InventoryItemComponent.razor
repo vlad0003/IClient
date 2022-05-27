@@ -1,5 +1,7 @@
 @using IClient.BusinessCore
+@using IClient.UseCases
 @inject NavigationManager nav
+@inject IDeleteInventoryUseCase DeleteInventoryUseCase
 @if (Inventory != null)
 {
     <tr>
@@ -8,6 +10,7 @@
         <td>@Inventory.Price $</td>
         <td>
             <button type="button" class="btn btn-outline-primary" @onclick="@(() => EditInventory(Inventory.InventoryId))">Редактировать</button>
+            <button type="button" class="btn btn-outline-danger" @onclick="@(async() => await DeleteInventory(Inventory))">Удалить</button>
         </td>
     </tr>
 }
@@ -17,9 +20,19 @@
 
     [Parameter]
     public Inventory? Inventory { get; set; }
+    
+    
+    [Parameter]
+    public EventCallback OnInventoryDeleted { get; set; }
 
     private void EditInventory(int invId)
     {
         nav.NavigateTo($"/editinventory/{invId}");
+    }
+    
+    private async Task DeleteInventory(Inventory inventory)
+    {
+        await DeleteInventoryUseCase.ExecuteAsync(Inventory.InventoryId);
+        await OnInventoryDeleted.InvokeAsync();
     }
 }

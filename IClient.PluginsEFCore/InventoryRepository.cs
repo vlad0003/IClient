@@ -12,6 +12,16 @@ public class InventoryRepository : IInventoryRepository
     {
         this.db = db;
     }
+    
+    public async Task DeleteInventoryAsync(int inventoryId)
+    {
+        var inventory = await db.Inventories.FindAsync(inventoryId);
+        if (inventory != null)
+        {
+            db.Inventories.Remove(inventory);
+            await db.SaveChangesAsync();
+        }
+    }
 
     public async Task<IEnumerable<Inventory>> GetInventoriesByName(string name)
     {
@@ -62,5 +72,6 @@ public class InventoryRepository : IInventoryRepository
 
             await db.SaveChangesAsync();
         }
+        
     }
 }
