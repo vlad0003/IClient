@@ -3,6 +3,7 @@
 @using IClient.BusinessCore
 @inject NavigationManager nav
 @using IClient.UseCases
+@attribute [Authorize(Roles = "Admin")]
 @attribute [Authorize]
 
 <h3>Добавить комплектующие</h3>
@@ -27,7 +28,7 @@
             <label for="price">Цена</label>
             <InputNumber id="price" @bind-Value="inventory.Price" class="form-control"></InputNumber>
         </div>
-        <button type="submit" class="btn btn-outline-success mt-3">Save</button>
+        <button type="submit" class="btn btn-outline-success mt-3">Сохранить</button>
     </EditForm>
 }
 

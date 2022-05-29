@@ -95,6 +95,11 @@ main[b-ply1ac1xgl] {
     padding-bottom: 0.5rem;
 }
 
+.nav-item:hover[b-zmhhc5zksw]{
+    transition: 0.7s;
+    transform: translateX(20px);
+}
+
     .nav-item:first-of-type[b-zmhhc5zksw] {
         padding-top: 1rem;
     }

@@ -13,10 +13,10 @@
                 <thead>
                 <tr>
                     <th>
-                        Name
+                        Название
                     </th>
                     <th>
-                        Quantity
+                        Кол-во
                     </th>
                 </tr>
                 </thead>
@@ -34,7 +34,9 @@
                                    @onchange="OnInventoryQtyChanged"/>
                         </td>
                         <td>
+                            <AuthorizeView Roles="Admin">
                             <button class="btn btn-link" type="button" @onclick="@(() => RemoveInventory(productInventory))">Удалить</button>
+                            </AuthorizeView>
                         </td>
                     </tr>
                 }

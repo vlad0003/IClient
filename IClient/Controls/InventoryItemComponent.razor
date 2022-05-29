@@ -1,7 +1,10 @@
 @using IClient.BusinessCore
 @using IClient.UseCases
+@using System.ComponentModel.DataAnnotations
 @inject NavigationManager nav
 @inject IDeleteInventoryUseCase DeleteInventoryUseCase
+
+
 @if (Inventory != null)
 {
     <tr>
@@ -9,8 +12,10 @@
         <td>@Inventory.Quantity</td>
         <td>@Inventory.Price $</td>
         <td>
+            <AuthorizeView Roles="Admin">
             <button type="button" class="btn btn-outline-primary" @onclick="@(() => EditInventory(Inventory.InventoryId))">Редактировать</button>
-            <button type="button" class="btn btn-outline-danger" @onclick="@(async() => await DeleteInventory(Inventory))">Удалить</button>
+            <button type="button" class="btn btn-outline-danger" @onclick="@(async () => await DeleteInventory(Inventory))">Удалить</button>
+            </AuthorizeView>
         </td>
     </tr>
 }

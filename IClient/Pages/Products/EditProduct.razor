@@ -5,6 +5,7 @@
 @inject IEditProductUseCase EditProductUseCase
 @inject NavigationManager nav
 @attribute [Authorize]
+@attribute [Authorize(Roles = "Admin")]
 <br/>
 
 @if (this.product != null)
@@ -33,7 +34,7 @@
         ></ProductInventoriesComponent>
         
         <br/>
-        <button type="submit" class="btn btn-outline-success mt-3">Save</button>
+        <button type="submit" class="btn btn-outline-success mt-3">Сохранить</button>
     </EditForm>
 }
 

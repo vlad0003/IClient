@@ -23,6 +23,11 @@
     padding-bottom: 0.5rem;
 }
 
+.nav-item:hover{
+    transition: 0.7s;
+    transform: translateX(20px);
+}
+
     .nav-item:first-of-type {
         padding-top: 1rem;
     }

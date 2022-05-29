@@ -31,7 +31,9 @@
     </table>
 }
 <br/>
+<AuthorizeView Roles="Admin">
 <button type="button" class="btn btn-outline-primary" @onclick="AddProduct">Добавить продукт</button>
+</AuthorizeView>
 
 
 @code {
