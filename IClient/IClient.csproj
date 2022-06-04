@@ -35,4 +35,9 @@
       <Folder Include="Data\Migrations" />
     </ItemGroup>
 
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Pages\SyncWithBank\BlazoredModal.razor" />
+      <_ContentIncludedByDefault Remove="Pages\SyncWithBank\SynchronizationExcel.razor" />
+    </ItemGroup>
+
 </Project>

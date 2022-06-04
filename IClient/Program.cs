@@ -27,7 +27,6 @@ builder.Services.AddServerSideBlazor();
 builder.Services
     .AddScoped<AuthenticationStateProvider, RevalidatingIdentityAuthenticationStateProvider<IdentityUser>>();
 
-
 builder.Services.AddDbContext<IClientContext>(options =>
 {
     options.UseNpgsql(@"Server=localhost;Port=5432;User Id=postgres;Password=3119;Database=XCLient");
