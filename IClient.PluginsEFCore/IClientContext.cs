@@ -9,7 +9,8 @@ public class IClientContext : DbContext
    public IClientContext(DbContextOptions options) : base(options)
         {
         }
-   public DbSet<Inventory> Inventories { get; set; }
+   
+        public DbSet<Inventory> Inventories { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<InventoryTransaction> InventoryTransactions { get; set; }
         public DbSet<ProductTransaction> ProductTransactions { get; set; }
@@ -28,7 +29,7 @@ public class IClientContext : DbContext
                 .HasOne(pi => pi.Inventory)
                 .WithMany(i => i.ProductInventories)
                 .HasForeignKey(pi => pi.InventoryId);
-            
+
             modelBuilder.Entity<Inventory>().HasData(
                 new Inventory { InventoryId = 1, Inventoryname = "Процессор", Price = 1000, Quantity = 10 },
                 new Inventory { InventoryId = 2, Inventoryname = "Корпус", Price = 20, Quantity = 10},
@@ -38,11 +39,6 @@ public class IClientContext : DbContext
                 new Inventory { InventoryId = 6, Inventoryname = "Видеокарта", Price = 300, Quantity = 10 },
                 new Inventory { InventoryId = 7, Inventoryname = "Материнская плата", Price = 200, Quantity = 10 },
                 new Inventory { InventoryId = 8, Inventoryname = "Оперативная память", Price = 50, Quantity = 10 }
-            );
-
-            modelBuilder.Entity<Product>().HasData(
-                new Product { ProductId = 1, ProductName = "Игровой пк", Price = 2000, Quantity = 5 },
-                new Product { ProductId = 2, ProductName = "Бюджетный пк", Price = 700, Quantity = 5 }
             );
 
             modelBuilder.Entity<ProductInventory>().HasData(
@@ -66,5 +62,5 @@ public class IClientContext : DbContext
                 new ProductInventory { ProductId = 2, InventoryId = 7, InventoryQuantity = 1 },
                 new ProductInventory { ProductId = 2, InventoryId = 8, InventoryQuantity = 4 }
             );
-    }
+        }
 }

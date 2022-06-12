@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ygpS1eN0VbltO1N77mNSRWgd5i8w52wUiDDUlOczW9o=",
+  "Hash": "JHJWwIcVVblmwg9qPbvITqaWMSlMXiWYv89BWHVDt8A=",
   "Source": "IClient",
   "BasePath": "_content/IClient",
   "Mode": "Default",
@@ -16,6 +16,40 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "/Users/vladislavkolpakov/.nuget/packages/blazored.toast/3.2.2/staticwebassets/blazored-toast.css",
+      "SourceId": "Blazored.Toast",
+      "SourceType": "Package",
+      "ContentRoot": "/Users/vladislavkolpakov/.nuget/packages/blazored.toast/3.2.2/staticwebassets/",
+      "BasePath": "_content/Blazored.Toast",
+      "RelativePath": "blazored-toast.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/Users/vladislavkolpakov/.nuget/packages/blazored.toast/3.2.2/staticwebassets/blazored-toast.css"
+    },
+    {
+      "Identity": "/Users/vladislavkolpakov/.nuget/packages/blazored.toast/3.2.2/staticwebassets/blazored-toast.min.css",
+      "SourceId": "Blazored.Toast",
+      "SourceType": "Package",
+      "ContentRoot": "/Users/vladislavkolpakov/.nuget/packages/blazored.toast/3.2.2/staticwebassets/",
+      "BasePath": "_content/Blazored.Toast",
+      "RelativePath": "blazored-toast.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/Users/vladislavkolpakov/.nuget/packages/blazored.toast/3.2.2/staticwebassets/blazored-toast.min.css"
+    },
     {
       "Identity": "/Users/vladislavkolpakov/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.5/staticwebassets/V5/css/site.css",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",

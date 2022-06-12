@@ -1,8 +1,10 @@
 @page "/addproduct"
 @using IClient.BusinessCore
 @using IClient.UseCases
+@using Blazored.Toast.Services
 @inject IAddProductUseCase AddProductUseCase
 @inject NavigationManager nav
+@inject IToastService _toastService
 @attribute [Authorize]
 @attribute [Authorize(Roles = "Admin")]
 
@@ -36,7 +38,7 @@
             ></ProductInventoriesComponent>
         
         <br/>
-        <button type="submit" class="btn btn-outline-success mt-3">Сохранить</button>
+        <button type="submit" class="btn btn-outline-success mt-3" @onclick="@(() => _toastService.ShowInfo("Added product"))">Сохранить</button>
     </EditForm>
     </div>
 }
@@ -71,5 +73,4 @@
     {
         this.product.ProductInventories = productInventories;
     }
-
 }

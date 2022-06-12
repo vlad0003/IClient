@@ -11,6 +11,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <PackageReference Include="Blazored.Toast" Version="3.2.2" />
       <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.5" />
       <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.5">
         <PrivateAssets>all</PrivateAssets>
@@ -22,6 +23,10 @@
       </PackageReference>
       <PackageReference Include="Npgsql" Version="6.0.4" />
       <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.4" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Users" />
     </ItemGroup>
 
 </Project>

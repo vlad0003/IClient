@@ -3,8 +3,10 @@
 @using Microsoft.AspNetCore.Components
 @using IClient.UseCases
 @using IClient.viewModels
+@inject IToastService _toastService
 @using IClient.BusinessCore
-<h3>Покупка деталей</h3>
+@using Blazored.Toast.Services
+<h3 class="text-center ">Покупка деталей</h3>
 <br/>
 
 @if (purchaseViewModel != null)
@@ -14,12 +16,12 @@
         <ValidationSummary></ValidationSummary>
 
         <div class="form-group mb-2">
-            <label for="po">Ордер покупки</label>
+            <label class="mb-2" for="po">Ордер покупки</label>
             <InputText id="po" @bind-Value="purchaseViewModel.PurchaseOrder" class="form-control"></InputText>
         </div>
 
-        <div class="form-group mb-2">
-            <label for="inv">Инвентарь для покупки</label>
+        <div class="form-group mt-2">
+            <label class="text-black" for="inv">Инвентарь для покупки</label>
             <ViewInventoriesComponent 
                 OnSelectInventory="OnSelectInventory"
                 DisplaySearchResult="true"></ViewInventoriesComponent>                   
@@ -33,12 +35,12 @@
             
         </div>
 
-        <div class="form-group">
+        <div class="form-group mt-3">
             <label for="qty">Кол-во</label>
             <InputNumber id="qty" @bind-Value="purchaseViewModel.QuantityToPurchase" class="form-control"></InputNumber>
         </div>
         <br/>
-        <button type="submit" class="btn btn-success">Купить</button>
+        <button type="submit" class="btn btn-success" @onclick="@(() => _toastService.ShowInfo("Предеты закум"))" >Купить</button>
 
     </EditForm>
 }

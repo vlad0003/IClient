@@ -30,10 +30,6 @@
         <label>&nbsp;</label>
         <button type="button" class="btn btn-primary form-control" @onclick="SearchProducts">Найти</button>
     </div>
-    <div class="col">
-        <label>&nbsp;</label>
-        <button type="button" class="btn btn-primary form-control" @onclick="PrintReport">Распечатать</button>
-    </div>
 </div>
 <br/>
 @if (productTransactions != null)
@@ -95,10 +91,4 @@
             dateTo,
             productTransactionType);    
     }
-
-    private void PrintReport()
-    {
-        JSRuntime.InvokeVoidAsync("print");
-    }
-
 }

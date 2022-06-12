@@ -8,6 +8,8 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="Blazored.Toast" Version="3.2.2" />
+        <PackageReference Include="EPPlus" Version="6.0.4" />
         <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="6.0.5" />
         <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="6.0.5" />
         <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.5" />
@@ -23,8 +25,10 @@
           <PrivateAssets>all</PrivateAssets>
           <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
+        <PackageReference Include="Microsoft.Office.Interop.Excel" Version="15.0.4795.1000" />
         <PackageReference Include="Npgsql" Version="6.0.4" />
         <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.4" />
+        <PackageReference Include="System.Runtime.InteropServices" Version="4.3.0" />
     </ItemGroup>
 
     <ItemGroup>
@@ -33,6 +37,8 @@
 
     <ItemGroup>
       <Folder Include="Data\Migrations" />
+      <Folder Include="Pages\Bank" />
+      <Folder Include="Pages\Users" />
     </ItemGroup>
 
     <ItemGroup>

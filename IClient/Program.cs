@@ -1,4 +1,5 @@
 using System.Security.Claims;
+using Blazored.Toast;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -23,10 +24,10 @@ builder.Services.AddDefaultIdentity<IdentityUser>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
 
 builder.Services.AddRazorPages();
+builder.Services.AddBlazoredToast();
 builder.Services.AddServerSideBlazor();
 builder.Services
     .AddScoped<AuthenticationStateProvider, RevalidatingIdentityAuthenticationStateProvider<IdentityUser>>();
-
 builder.Services.AddDbContext<IClientContext>(options =>
 {
     options.UseNpgsql(@"Server=localhost;Port=5432;User Id=postgres;Password=3119;Database=XCLient");

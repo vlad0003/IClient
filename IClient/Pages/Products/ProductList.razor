@@ -11,7 +11,7 @@
 
 @if (listProducts != null)
 {
-    <table class="table">
+    <table class="table mt-2">
         <thead>
         <tr>
             <th>Название</th>
@@ -32,7 +32,7 @@
 }
 <br/>
 <AuthorizeView Roles="Admin">
-<button type="button" class="btn btn-outline-primary" @onclick="AddProduct">Добавить продукт</button>
+<button type="button" class="btn btn-outline-primary mt-2">Добавить продукт</button>
 </AuthorizeView>
 
 

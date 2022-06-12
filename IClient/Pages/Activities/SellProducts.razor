@@ -2,7 +2,9 @@
 @using IClient.viewModels
 @using IClient.BusinessCore
 @using IClient.UseCases
+@using Blazored.Toast.Services
 @inject ISellProductUseCase SellProductUseCase
+@inject IToastService  _toastService
 @attribute [Authorize]
 
 <h3>Продать продукт</h3>
@@ -39,7 +41,7 @@
           <h5 class="mt-3">Цена: @selectedProduct?.Price.ToString()$</h5>
 
         <br/>
-        <button type="submit" class="btn btn-primary">Sell</button>
+        <button type="submit" class="btn btn-primary">Продать</button>
 
     </EditForm>
 }
@@ -59,6 +61,7 @@
         else
         {
             this.errorMessage = string.Empty;
+            _toastService.ShowInfo("fdsafadsf");
         }
         
         SellProductUseCase.ExecuteAsync(this.sellViewModel.SalesOrderNumber, this.selectedProduct, this.sellViewModel.QuantityToSell, "Vlad");

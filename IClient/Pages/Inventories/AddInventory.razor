@@ -3,6 +3,8 @@
 @using IClient.BusinessCore
 @inject NavigationManager nav
 @using IClient.UseCases
+@using Blazored.Toast.Services
+@inject IToastService _toastService
 @attribute [Authorize(Roles = "Admin")]
 @attribute [Authorize]
 
@@ -47,6 +49,7 @@
         {
             await AddInventoryUseCase.ExecuteAsync(this.inventory);
             nav.NavigateTo("/inventories");
+            _toastService.ShowSuccess("Предмет добавлен");
         }
     }
 
