@@ -9,6 +9,7 @@ using IClient.PluginsEFCore;
 using IClient.UseCases;
 using IClient.UseCases.PluginsInterfaces;
 using IClient.UseCases.Reports;
+using Microsoft.Extensions.Configuration.UserSecrets;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -60,8 +61,8 @@ builder.Services.AddTransient<ISearchProductTransactionUseCase, SearchProductTra
 builder.Services.AddAuthentication()
 .AddGoogle(googleOptions =>
 {
-    googleOptions.ClientId = "765926947883-43a25569bvee1h2dmg4ub6irpgrokq9c.apps.googleusercontent.com";
-    googleOptions.ClientSecret = "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";
+    googleOptions.ClientId = builder.Configuration["IClient:ClientId"];
+    googleOptions.ClientSecret = builder.Configuration["IClient:ClientSecret"];
 });
 
 var app = builder.Build();

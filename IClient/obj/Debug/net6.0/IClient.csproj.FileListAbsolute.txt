@@ -106,3 +106,4 @@
 /Users/vladislavkolpakov/RiderProjects/IClient/IClient/bin/Debug/net6.0/Microsoft.IO.RecyclableMemoryStream.dll
 /Users/vladislavkolpakov/RiderProjects/IClient/IClient/bin/Debug/net6.0/Microsoft.Office.Interop.Excel.dll
 /Users/vladislavkolpakov/RiderProjects/IClient/IClient/bin/Debug/net6.0/Blazored.Toast.dll
+/Users/vladislavkolpakov/RiderProjects/IClient/IClient/bin/Debug/net6.0/secrets.json
