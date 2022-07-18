@@ -28,10 +28,10 @@ builder.Services.AddBlazoredToast();
 builder.Services.AddServerSideBlazor();
 builder.Services
     .AddScoped<AuthenticationStateProvider, RevalidatingIdentityAuthenticationStateProvider<IdentityUser>>();
+
+var connection = builder.Configuration.GetConnectionString("IClientDb");
 builder.Services.AddDbContext<IClientContext>(options =>
-{
-    options.UseNpgsql(@"Server=localhost;Port=5432;User Id=postgres;Password=3119;Database=XCLient");
-});
+    options.UseNpgsql(connection));
 
 
 builder.Services.AddTransient<IInventoryRepository, InventoryRepository>();
